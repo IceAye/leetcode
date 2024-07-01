@@ -29,3 +29,5 @@ let balancedStringSplit = function ( s ) {
 };
 
 console.log('Output: ', balancedStringSplit("RLRRLLRLRL"))
+console.log('Output: ', balancedStringSplit("RLRRRLLRLL"))
+console.log('Output: ', balancedStringSplit("LLLLRRRR"))
