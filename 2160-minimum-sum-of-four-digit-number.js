@@ -15,3 +15,6 @@ let minimumSum = function(num) {
     let digits = String(num).split('').sort();
     return parseInt(digits[0] + digits[2]) + parseInt(digits[1] + digits[3]);
 };
+
+console.log('Output: ', minimumSum(2932))
+console.log('Output: ', minimumSum(4009))
