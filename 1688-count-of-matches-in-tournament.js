@@ -13,13 +13,13 @@
 //
 // ✅ SOLUTION:
 
-let numberOfMatches = function(n) {
+let numberOfMatches = function ( n ) {
     let result = 0
     let win = n
     while (win > 1) {
         if (win % 2 === 0) {
             result += win / 2
-            win = win/2
+            win = win / 2
         } else {
             result += (win - 1) / 2
             win = (win - 1) / 2 + 1
