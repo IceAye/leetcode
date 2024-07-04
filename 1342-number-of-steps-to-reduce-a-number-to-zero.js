@@ -6,3 +6,7 @@ let numberOfSteps = function ( num ) {
     }
     return step
 }
+
+console.log('Output: ' , numberOfSteps(14))
+console.log('Output: ' , numberOfSteps(8))
+console.log('Output: ' , numberOfSteps(123))
