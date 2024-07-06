@@ -1,3 +1,12 @@
+// ❓ DESCRIPTION:
+// You are given the strings key and message, which represent a cipher key and a secret message, respectively.
+// The steps to decode message are as follows:
+//  Use the first appearance of all 26 lowercase English letters in key as the order of the substitution table.
+//  Align the substitution table with the regular English alphabet.
+//  Each letter in message is then substituted using the table.
+//  Spaces ' ' are transformed to themselves.
+//
+// ✅ SOLUTION:
 let decodeMessage = function ( key , message ) {
     let keyString = [...new Set(key.replace(/ /g , ''))].join('')
     let result = ''
