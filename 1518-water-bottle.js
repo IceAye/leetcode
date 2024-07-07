@@ -6,3 +6,7 @@ let numWaterBottles = function(numBottles, numExchange) {
     }
     return result
 }
+
+console.log('Output: ' , numWaterBottles(9, 3))
+console.log('Output: ' , numWaterBottles(15, 4))
+console.log('Output: ' , numWaterBottles(5, 5))
