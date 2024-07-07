@@ -7,6 +7,4 @@
  * }
  */
 
-let checkTree = function(root) {
-    return root.val === root.left.val + root.right.val
-}
+const checkTree = root => root.val === (root.left.val + root.right.val)
