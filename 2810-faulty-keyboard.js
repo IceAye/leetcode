@@ -1,12 +1,10 @@
 let finalString = function ( s ) {
-    let array = s.split('')
     let result = []
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] === 'i') {
-            result.reverse()
-        } else {
-            result.push(array[i])
-        }
+    for (const char of s) {
+        char === 'i' ? result.reverse() : result.push(char)
     }
     return result.join('')
 }
+
+console.log('Output: ' , finalString("string"))
+console.log('Output: ' , finalString("poiinter"))
