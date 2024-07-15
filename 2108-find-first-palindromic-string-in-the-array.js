@@ -1,6 +1,6 @@
 let firstPalindrome = function (words) {
-    for (let i = 0; i < words.length; i++) {
-        if (words[i] === words[i].split('').reverse().join('')) return words[i]
+    for (const word of words) {
+        if (word === word.split('').reverse().join('')) return word
     }
     return ''
 }
