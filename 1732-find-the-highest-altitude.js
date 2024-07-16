@@ -5,3 +5,6 @@ let largestAltitude = function(gain) {
     }
     return Math.max(...array, 0)
 }
+
+console.log(largestAltitude([-5,1,5,0,-7]))
+console.log(largestAltitude([-4,-3,-2,-1,4,3,2]))
