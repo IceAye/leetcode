@@ -1,6 +1,5 @@
 let checkIfPangram = function ( sentence ) {
-    let result = new Set(sentence)
-    return result.size === 26
+    return new Set(sentence).size === 26
 }
 
 console.log(checkIfPangram("thequickbrownfoxjumpsoverthelazydog"))
