@@ -1,13 +1,5 @@
 let isAcronym = function(words, s) {
-    let result = false;
-    for (let i = 0; i < words.length; i++) {
-        if (words[i][0] === s[i] && words.length === s.length) {
-            result = true
-        } else {
-            return false;
-        }
-    }
-    return result
+    return s === words.map(item => item[0]).join('')
 }
 
 console.log(isAcronym(["alice","bob","charlie"], "abc"))
