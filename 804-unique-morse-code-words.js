@@ -10,7 +10,6 @@
 const morseCode = [".-" , "-..." , "-.-." , "-.." , "." , "..-." , "--." , "...." , ".." , ".---" , "-.-" , ".-.." , "--" , "-." , "---" , ".--." , "--.-" , ".-." , "..." , "-" , "..-" , "...-" , ".--" , "-..-" , "-.--" , "--.."]
 const abc = "abcdefghijklmnopqrstuvwxyz"
 let uniqueMorseRepresentations = function ( words ) {
-    let sum = 0
     let result = []
     for (let i = 0; i < words.length; i++) {
         let word = ''
