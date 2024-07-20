@@ -1,7 +1,6 @@
 let maximizeSum = function ( nums , k ) {
-    let result = 0
-    let num = nums.sort(( a , b ) => a - b).pop()
-    result = num
+    let num = Math.max(...nums)
+    let result = num
     while (k - 1 > 0) {
         num++
         result += num
