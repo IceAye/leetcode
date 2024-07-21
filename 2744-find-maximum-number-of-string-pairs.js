@@ -7,3 +7,7 @@ let maximumNumberOfStringPairs = function (words) {
     }
     return result
 }
+
+console.log(maximumNumberOfStringPairs(["cd","ac","dc","ca","zz"]))
+console.log(maximumNumberOfStringPairs(["ab","ba","cc"]))
+console.log(maximumNumberOfStringPairs(["aa","ab"]))
