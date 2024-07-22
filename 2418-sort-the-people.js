@@ -1,11 +1,12 @@
 let sortPeople = function ( names , heights ) {
     let result = []
-    while (heights.length > 0) {
-        let index = heights.indexOf(Math.max(...heights))
-
-        result.push(names[index])
-        names.splice(index , 1)
-        heights.splice(index , 1)
+    let people = new Map()
+    for (let i = 0; i < names.length; i++) {
+        people.set(heights[i], names[i])
+    }
+    heights.sort(( a , b ) => b - a)
+    for (const height of heights) {
+        result.push(people.get(height))
     }
     return result
 }
