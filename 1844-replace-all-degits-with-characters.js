@@ -1,10 +1,13 @@
 let replaceDigits = function ( s ) {
     let word = ""
-    for (let i = 1; i < s.length; i += 2) {
-        let char = String.fromCharCode(s.charCodeAt(i - 1) + +s.charAt(i))
-        word += s[i - 1] + char
+    for (let i = 0; i < s.length; i++) {
+        if (i % 2 !== 0) {
+            word += String.fromCharCode(s.charCodeAt(i - 1) + +s.at(i))
+        } else {
+            word += s.at(i)
+        }
     }
-    return s.length % 2 !== 0 ? word + s.at(-1) : word
+    return word
 }
 
 console.log(replaceDigits("a1c1e1"))
