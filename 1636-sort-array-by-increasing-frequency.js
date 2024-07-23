@@ -1,10 +1,10 @@
 let frequencySort = function (nums) {
     let obj = new Map()
     for (let i = 0; i < nums.length; i++) {
-        obj.set(nums[i], (obj.get(nums[i]) || 0) + 1)
+        obj.set(nums[i], (obj.get(nums[i]) + 1) || 1)
     }
     return nums.sort((a, b) =>
-        obj.get(a) !== obj.get(b) ? obj.get(a) - obj.get(b) : b - a,
+        obj.get(a) - obj.get(b) || b - a
     )
 }
 
