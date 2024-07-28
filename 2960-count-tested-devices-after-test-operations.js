@@ -1,4 +1,4 @@
-// ❓ DESCRIPTION:
+// ❓DESCRIPTION:
 // You are given a 0-indexed integer array batteryPercentages having length n, denoting the battery percentages of n 0-indexed devices.
 // Your task is to test each device i in order from 0 to n - 1, by performing the following test operations:
 //
