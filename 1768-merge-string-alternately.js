@@ -1,16 +1,10 @@
 let mergeAlternately = function (word1, word2) {
     let string = "";
-    for (let i = 0; i < word1.length; i++) {
+    let maxLength = Math.max(word1.length, word2.length)
+    for (let i = 0; i < maxLength; i++) {
         string += word1.charAt(i) + word2.charAt(i);
     }
-
-    let remain = word2.length - word1.length;
-
-    if (remain <= 0) {
-        return string;
-    } else {
-        return string + word2.slice(word1.length);
-    }
+return string
 };
 
 console.log(mergeAlternately("abc", "pqr"));
