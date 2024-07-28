@@ -3,7 +3,7 @@ let countTestedDevices = function (batteryPercentages) {
     for (let i = 0; i < batteryPercentages.length; i++) {
         if (batteryPercentages[i] > 0) {
             result += 1;
-            batteryPercentages = batteryPercentages.map((item) => (item -= 1));
+            batteryPercentages = batteryPercentages.map(item => item -= 1);
         }
     }
     return result;
