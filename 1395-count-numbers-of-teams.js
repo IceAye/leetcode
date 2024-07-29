@@ -1,3 +1,14 @@
+// ❓ DESCRIPTION:
+// There are n soldiers standing in a line. Each soldier is assigned a unique rating value.
+//
+// You have to form a team of 3 soldiers amongst them under the following rules:
+//
+// Choose 3 soldiers with index (i, j, k) with rating (rating[i], rating[j], rating[k]).
+// A team is valid if: (rating[i] < rating[j] < rating[k]) or (rating[i] > rating[j] > rating[k]) where (0 <= i < j < k < n).
+// Return the number of teams you can form given the conditions. (soldiers can be part of multiple teams).
+//
+// ✅ SOLUTION:
+// runtime 66ms (100%) memo 48.84MB (92.86%)
 let numTeams = function (rating) {
     let result = 0;
     for (let i = 0; i < rating.length; i++) {
