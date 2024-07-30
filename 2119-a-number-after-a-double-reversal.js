@@ -1,5 +1,5 @@
 let isSameAfterReversals = function (num) {
-    return num.toString().at(-1) != 0 || num === 0;
+    return num % 10 !== 0 || num === 0;
 };
 
 console.log(isSameAfterReversals(526));
