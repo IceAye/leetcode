@@ -7,7 +7,7 @@ let maxFrequencyElements = function (nums) {
 
     let output = [];
 
-    elements.forEach((value, key, map) => {
+    elements.forEach((value, key) => {
         if (value === max) output.push(key);
     });
 
