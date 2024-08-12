@@ -1,6 +1,6 @@
 let findDelayedArrivalTime = function ( arrivalTime , delayedTime ) {
-    let time = arrivalTime + delayedTime
-    return time >= 24 ? Math.abs(24 - time) : time;
+    let time = arrivalTime + delayedTime;
+    return time % 24;
 };
 
 console.log(findDelayedArrivalTime(15 , 5));
