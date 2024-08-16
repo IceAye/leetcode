@@ -1,7 +1,7 @@
 let prefixCount = function (words, pref) {
     let sum = 0;
     for (const word of words) {
-        if (word.match(`^${pref}`)) sum++;
+        sum += word.startsWith(pref);
     }
     return sum;
 };
