@@ -1,19 +1,5 @@
 let generateTheString = function (n) {
-    let result = "";
-
-    if (n % 2 !== 0) {
-        while (n > 0) {
-            result += "a";
-            n--;
-        }
-        return result;
-    } else {
-        while (n > 1) {
-            result += "a";
-            n--;
-        }
-        return result + "b";
-    }
+    return n % 2 === 0 ? "a".repeat(n - 1) + "b" : "a".repeat(n);
 };
 
 console.log(generateTheString(4));
