@@ -1,11 +1,11 @@
 let uniqueOccurrences = function (arr) {
     let map = new Map();
 
-    for (let i = 0; i < arr.length; i++) {
-        map.set(arr[i], map.get(arr[i]) + 1 || 1);
+    for (const item of arr) {
+        map.set(item, map.get(item) + 1 || 1);
     }
 
-    return [...map.keys()].length === new Set(map.values()).size;
+    return map.size === new Set(map.values()).size;
 };
 
 console.log(uniqueOccurrences([1, 2, 2, 1, 1, 3]));
