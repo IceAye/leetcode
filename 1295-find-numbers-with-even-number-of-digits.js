@@ -1,11 +1,5 @@
 let findNumbers = function (nums) {
-    let count = 0;
-
-    for (const num of nums) {
-        if (String(num).split("").length % 2 === 0) count++;
-    }
-
-    return count;
+    return nums.reduce((even, num) => (String(num).length % 2 ? even : even + 1), 0);
 };
 
 console.log(findNumbers([12, 345, 2, 6, 7896]));
