@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// Given an array nums of integers, return how many of them contain an even number of digits.
+//
+// ✅ SOLUTION:
 let findNumbers = function (nums) {
     return nums.reduce((even, num) => (String(num).length % 2 ? even : even + 1), 0);
 };
