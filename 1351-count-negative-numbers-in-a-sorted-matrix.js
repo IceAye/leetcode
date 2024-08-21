@@ -1,5 +1,4 @@
 // SOLUTION 1 (simple iteration):
-
 let countNegatives = function (grid) {
     let count = 0;
 
@@ -10,4 +9,9 @@ let countNegatives = function (grid) {
     }
 
     return count;
+};
+
+// SOLUTION 2 (filter):
+let countNegatives = function (grid) {
+    return grid.flat().filter(item => item < 0).length;
 };
