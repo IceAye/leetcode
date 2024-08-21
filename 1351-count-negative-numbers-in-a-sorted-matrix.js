@@ -1,4 +1,7 @@
-// SOLUTION 1 (simple iteration):
+// ❓ DESCRIPTION:
+// Given a m x n matrix grid which is sorted in non-increasing order both row-wise and column-wise, return the number of negative numbers in grid.
+//
+// ✅ SOLUTION 1 (simple iteration):
 let countNegatives = function (grid) {
     let count = 0;
 
@@ -11,12 +14,12 @@ let countNegatives = function (grid) {
     return count;
 };
 
-// SOLUTION 2 (filter):
+// ✅ SOLUTION 2 (filter):
 let countNegatives = function (grid) {
     return grid.flat().filter(item => item < 0).length;
 };
 
-// SOLUTION 3 (binary search), the most efficient:
+// ✅ SOLUTION 3 (binary search), the most efficient:
 let countNegatives = function (grid) {
     let count = 0;
     let length = grid[0].length;
