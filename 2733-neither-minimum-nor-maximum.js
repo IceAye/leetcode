@@ -1,4 +1,8 @@
-// SOLUTION 1:
+// ❓ DESCRIPTION:
+// Given an integer array nums containing distinct positive integers, find and return any number from the array that is neither the minimum nor the maximum value in the array, or -1 if there is no such number.
+//
+// Return the selected integer.
+// ✅ SOLUTION 1:
 let findNonMinOrMax = function (nums) {
     if (nums.length <= 2) return -1;
 
@@ -9,13 +13,13 @@ let findNonMinOrMax = function (nums) {
     return nums.find(any);
 };
 
-// SOLUTION 2:
+// ✅ SOLUTION 2:
 let findNonMinOrMax = function (nums) {
     if (nums.length <= 2) return -1;
     return nums.sort((a, b) => a - b)[1];
 };
 
-// SOLUTION 3:
+// ✅ SOLUTION 3:
 let findNonMinOrMax = function (nums) {
     if (nums.length <= 2) return -1;
 
