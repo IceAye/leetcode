@@ -10,4 +10,3 @@ console.log(sumZero(5));
 console.log(sumZero(4));
 console.log(sumZero(3));
 console.log(sumZero(7));
-
