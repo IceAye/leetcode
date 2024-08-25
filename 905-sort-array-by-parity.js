@@ -1,4 +1,9 @@
-// SOLUTION 1:
+// ❓ DESCRIPTION:
+// Given an integer array nums, move all the even integers at the beginning of the array followed by all the odd integers.
+//
+// Return any array that satisfies this condition.
+//
+// ✅ SOLUTION 1:
 let sortArrayByParity = function (nums) {
     let even = [];
     let odd = [];
@@ -10,7 +15,7 @@ let sortArrayByParity = function (nums) {
     return [...even, ...odd];
 };
 
-// SOLUTION 2:
+// ✅ SOLUTION 2:
 let sortArrayByParity = function (nums) {
     let left = 0;
     let right = nums.length - 1;
