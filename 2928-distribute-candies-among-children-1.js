@@ -1,3 +1,9 @@
+// ❓ DESCRIPTION:
+// You are given two positive integers n and limit.
+//
+// Return the total number of ways to distribute n candies among 3 children such that no child gets more than limit candies.
+//
+// ✅ SOLUTION:
 let distributeCandies = function (n, limit) {
     let count = 0;
     for (let i = 0; i <= limit; i++) {
