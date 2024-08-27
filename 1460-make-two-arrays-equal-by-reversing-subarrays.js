@@ -3,9 +3,24 @@
 //
 // Return true if you can make arr equal to target or false otherwise.
 //
-// ✅ SOLUTION:
+// ✅ SOLUTION 1:
 let canBeEqual = function (target, arr) {
     return target.sort((a, b) => a - b).toString() === arr.sort((a, b) => a - b).toString()
+};
+
+// SOLUTION 2:
+let canBeEqual = function (target, arr) {
+    let map = new Map();
+
+    for (let i = 0; i < target.length; i++) {
+        map.set(target[i], (map.get(target[i]) || 0) + 1);
+        map.set(arr[i], (map.get(arr[i]) || 0) - 1);
+    }
+
+    for (const count of map.values()) {
+        if (count !== 0) return false;
+    }
+    return map;
 };
 
 console.log(canBeEqual([1, 2, 3, 4], [2, 4, 1, 3]));
