@@ -1,3 +1,9 @@
+// ❓ DESCRIPTION:
+// Given two integer arrays nums1 and nums2, return an array of their
+// intersection
+// . Each element in the result must be unique and you may return the result in any order.
+//
+// ✅ SOLUTION:
 let intersection = function ( nums1 , nums2 ) {
     let result = []
     let set1 = new Set(nums1);
