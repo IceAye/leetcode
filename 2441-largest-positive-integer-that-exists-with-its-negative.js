@@ -1,4 +1,9 @@
-// SOLUTION 1:
+// ❓ DESCRIPTION:
+// Given an integer array nums that does not contain any zeros, find the largest positive integer k such that -k also exists in the array.
+//
+// Return the positive integer k. If there is no such integer, return -1.
+//
+// ✅ SOLUTION 1:
 let findMaxK = function (nums) {
     let array = [];
     for (const num of nums) {
@@ -7,7 +12,7 @@ let findMaxK = function (nums) {
     return array.length > 0 ? Math.max(...array) : -1;
 };
 
-// SOLUTION 2 (with set):
+// ✅ SOLUTION 2 (with set):
 let findMaxK = function (nums) {
     let result = -1;
     let numSet = new Set(nums)
