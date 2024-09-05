@@ -1,3 +1,4 @@
+// SOLUTION 1 (hashmap):
 let commonChars = function (words) {
     let result = [];
     let map = new Map();
@@ -26,6 +27,17 @@ let commonChars = function (words) {
             result.push(key);
             value--;
         }
+    }
+    return result;
+};
+
+// SOLUTION 2:
+let commonChars = function (words) {
+    let result = [];
+
+    for (let letter of words[0]) {
+        if (words.every((word) => word.includes(letter))) result.push(letter);
+        words = words.map((word) => word.replace(letter, ""));
     }
     return result;
 };
