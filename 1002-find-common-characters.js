@@ -1,4 +1,7 @@
-// SOLUTION 1 (hashmap):
+// ❓ DESCRIPTION:
+// Given a string array words, return an array of all characters that show up in all strings within the words (including duplicates). You may return the answer in any order.
+//
+// ✅ SOLUTION 1 (hashmap):
 let commonChars = function (words) {
     let result = [];
     let map = new Map();
