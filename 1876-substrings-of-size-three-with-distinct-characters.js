@@ -1,4 +1,10 @@
-// SOLUTION 1:
+// ❓ DESCRIPTION:
+// A string is good if there are no repeated characters.
+// Given a string s, return the number of good substrings of length three in s.
+// Note that if there are multiple occurrences of the same substring, every occurrence should be counted.
+// A substring is a contiguous sequence of characters in a string.
+//
+// ✅ SOLUTION 1:
 let countGoodSubstrings = function (s) {
     let count = 0;
     for (let i = 0; i < s.length - 2; i++) {
@@ -7,7 +13,7 @@ let countGoodSubstrings = function (s) {
     return count;
 };
 
-// SOLUTION 2 (set):
+// ✅ SOLUTION 2 (set):
 let countGoodSubstrings = function (s) {
     let count = 0;
     for (let i = 0; i < s.length - 2; i++) {
