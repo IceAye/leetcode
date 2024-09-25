@@ -1,6 +1,7 @@
+
 let findRelativeRanks = function (score) {
     let sorted = score.toSorted((a, b) => b - a);
-    return score.map((item, index) =>
+    return score.map((item) =>
         item === sorted[0]
             ? "Gold Medal"
             : item === sorted[1]
