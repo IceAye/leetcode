@@ -1,3 +1,4 @@
+// SOLUTION 1:
 let sortArrayByParityII = function(nums) {
     let result = [];
     let [evens, odds] = nums.reduce((acc, curr) => {
@@ -6,6 +7,23 @@ let sortArrayByParityII = function(nums) {
     }, [[], []])
     while (odds.length > 0) {
         result.push(evens.pop(), odds.pop())
+    }
+    return result
+};
+
+// SOLUTION 2:
+let sortArrayByParityII = function(nums) {
+    let result = [];
+    let evenIndex = 0;
+    let oddIndex = 1;
+    for (const num of nums) {
+        if (num % 2 === 0) {
+            result[evenIndex] = num;
+            evenIndex += 2
+        } else {
+            result[oddIndex] = num;
+            oddIndex += 2
+        }
     }
     return result
 };
