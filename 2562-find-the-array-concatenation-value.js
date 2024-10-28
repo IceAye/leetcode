@@ -10,7 +10,7 @@
 // ✅ SOLUTION (runtime 91.2%):
 let findTheArrayConcVal = function (nums) {
     let middle = Math.floor(nums.length / 2)
-    let result = 0
+    let result = 0;
     for (let i = 0; i < middle; i++){
         result += +(String(nums.at(i)) + String(nums.at(-1 - i)))
     }
