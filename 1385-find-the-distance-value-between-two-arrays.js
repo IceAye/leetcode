@@ -1,9 +1,15 @@
+// SOLUTION 1:
 let findTheDistanceValue = function(arr1, arr2, d) {
     let count = 0;
     for (const num1 of arr1) {
         if (arr2.every(num2 => Math.abs(num1 - num2) > d)) count++;
     }
     return count;
+};
+
+// SOLUTION 2:
+let findTheDistanceValue = function(arr1, arr2, d) {
+    return arr1.filter(num1 => arr2.every(num2 => Math.abs(num1 - num2) > d)).length;
 };
 
 console.log(findTheDistanceValue([4,5,8], [10,9,1,8], 2)) // 2
