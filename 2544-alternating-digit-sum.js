@@ -1,3 +1,10 @@
+// ❓ DESCRIPTION:
+// You are given a positive integer n. Each digit of n has a sign according to the following rules:
+// The most significant digit is assigned a positive sign.
+// Each other digit has an opposite sign to its adjacent digits.
+// Return the sum of all digits with their corresponding sign.
+//
+// ✅ SOLUTION (runtime 100%):
 const alternateDigitSum = function(n) {
     let array = Array.from(n.toString(), Number)
     let sign = array.indexOf(Math.max(...array)) % 2 === 0
@@ -16,6 +23,7 @@ const alternateDigitSum = function(n) {
     return result
 };
 
+// 📌 TESTCASE:
 console.log(alternateDigitSum(521)) // 4
 console.log(alternateDigitSum(111)) // 1
 console.log(alternateDigitSum(886996)) // 0
