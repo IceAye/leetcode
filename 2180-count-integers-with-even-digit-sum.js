@@ -1,3 +1,8 @@
+// ❓ DESCRIPTION:
+// Given a positive integer num, return the number of positive integers less than or equal to num whose digit sums are even.
+// The digit sum of a positive integer is the sum of all its digits.
+//
+// ✅ SOLUTION:
 const countEven = function(num) {
     let count = 0;
     let i = 1;
@@ -13,5 +18,6 @@ const countEven = function(num) {
     return count;
 };
 
+// 📌 TESTCASE:
 console.log(countEven(4)) // 2
 console.log(countEven(30)) // 14
