@@ -1,3 +1,9 @@
+// ❓ DESCRIPTION:
+// You are given an m x n binary matrix matrix.
+// You can choose any number of columns in the matrix and flip every cell in that column (i.e., Change the value of the cell from 0 to 1 or vice versa).
+// Return the maximum number of rows that have all values equal after some number of flips.
+//
+// ✅ SOLUTION (runtime 36 ms, 80%):
 const maxEqualRowsAfterFlips = function(matrix) {
     let array = [];
     for (const row of matrix) {
@@ -14,6 +20,7 @@ const maxEqualRowsAfterFlips = function(matrix) {
     return Math.max(...map.values())
 };
 
+// 📌 TESTCASE:
 console.log(maxEqualRowsAfterFlips([[0,1],[1,1]])) // 1
 console.log(maxEqualRowsAfterFlips([[0,1],[1,0]])) // 2
 console.log(maxEqualRowsAfterFlips([[0,0,0],[0,0,1],[1,1,0]])) // 2
