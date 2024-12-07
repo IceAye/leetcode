@@ -1,3 +1,14 @@
+// ❓ DESCRIPTION:
+// Given a date string in the form Day Month Year, where:
+// Day is in the set {"1st", "2nd", "3rd", "4th", ..., "30th", "31st"}.
+// Month is in the set {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"}.
+// Year is in the range [1900, 2100].
+// Convert the date string to the format YYYY-MM-DD, where:
+// YYYY denotes the 4 digit year.
+// MM denotes the 2 digit month.
+// DD denotes the 2 digit day.
+//
+// ✅ SOLUTION (100% runtime):
 const reformatDate = function (date) {
     const months = {
         Jan: "01",
@@ -18,6 +29,7 @@ const reformatDate = function (date) {
     return `${array[2]}-${months[array[1]]}-${day}`;
 };
 
+// 📌 TESTCASE:
 console.log(reformatDate("20th Oct 2052")); // "2052-10-20"
 console.log(reformatDate("6th Jun 1933")); // "1933-06-06"
 console.log(reformatDate("26th May 1960")); // "1960-05-26"
