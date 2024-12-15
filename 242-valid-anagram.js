@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+//
+// ✅ SOLUTION:
 const isAnagram = function (s, t) {
     if (s.length !== t.length) return false;
 
@@ -15,5 +19,6 @@ const isAnagram = function (s, t) {
     return true;
 };
 
+// 📌 TESTCASE:
 console.log(isAnagram("anagram", "nagaram")); // true
 console.log(isAnagram("rat", "car")); // false
