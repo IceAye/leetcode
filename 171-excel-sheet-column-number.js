@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// Given a string columnTitle that represents the column title as appears in an Excel sheet, return its corresponding column number.
+//
+// ✅ SOLUTION:
 const titleToNumber = function (columnTitle) {
     let count = 0;
     for (const char of columnTitle) {
@@ -6,6 +10,7 @@ const titleToNumber = function (columnTitle) {
     return count;
 };
 
+// 📌 TESTCASE:
 console.log(titleToNumber("A")) // 1
 console.log(titleToNumber("AB")) // 28
 console.log(titleToNumber("ZY")) // 701
