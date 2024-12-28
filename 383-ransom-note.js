@@ -14,6 +14,14 @@ const canConstruct = function (ransomNote, magazine) {
     return true;
 };
 
+const canConstruct = function (ransomNote, magazine) {
+    for (const char of magazine) {
+        ransomNote = ransomNote.replace(char, '');
+    }
+    return ransomNote.length === 0;
+};
+
+
 console.log(canConstruct("a", "b")); // false
 console.log(canConstruct("aa", "ab")); // false
 console.log(canConstruct("aa", "aab")); // true
