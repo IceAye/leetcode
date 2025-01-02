@@ -1,3 +1,9 @@
+// ❓ DESCRIPTION:
+// Given a 0-indexed integer array nums, return the number of distinct quadruplets (a, b, c, d) such that:
+// nums[a] + nums[b] + nums[c] == nums[d], and
+// a < b < c < d
+//
+// ✅ SOLUTION:
 const countQuadruplets = function(nums) {
     let count = 0;
     for (let i = 0; i < nums.length - 3; i++) {
@@ -12,6 +18,7 @@ const countQuadruplets = function(nums) {
     return count;
 };
 
+// 📌 TESTCASE:
 console.log(countQuadruplets([1,2,3,6])) // 1
 console.log(countQuadruplets([3,3,6,4,5])) // 0
 console.log(countQuadruplets([1,1,1,3,5])) // 4
