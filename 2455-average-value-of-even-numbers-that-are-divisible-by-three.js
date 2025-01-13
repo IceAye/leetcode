@@ -13,6 +13,18 @@ const averageValue = function (nums) {
     return 0;
 };
 
+const averageValue = function (nums) {
+    let sum = 0;
+    let count = 0;
+    for (const num of nums) {
+        if (num % 2 === 0 && num % 3 === 0) {
+            sum += num;
+            count++;
+        }
+    }
+    return sum ? Math.floor(sum / count) : 0;
+};
+
 console.log(averageValue([1, 3, 6, 10, 12, 15])); // 9
 console.log(averageValue([1, 2, 4, 7, 10])); // 0
 console.log(averageValue([43,9,75,76,25,96,46,85,19,29,88,2,5,24,60,26,76,24,96,82,97,97,72,35,21,77,82,30,94,55,76,94,51])); // 57
