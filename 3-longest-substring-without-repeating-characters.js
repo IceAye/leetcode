@@ -1,7 +1,7 @@
-// DESCRIPTION:
+// ❓ DESCRIPTION:
 // Given a string s, find the length of the longest substring without duplicate characters.
 //
-// ❓ SOLUTION (99.88% runtime, 98.06% memory):
+// ✅ SOLUTION (99.88% runtime, 98.06% memory):
 const lengthOfLongestSubstring = function(s) {
     let result = 0;
     let mapIndicis = new Map();
@@ -18,7 +18,7 @@ const lengthOfLongestSubstring = function(s) {
     return result;
 };
 
-// ✅ TESTCASE:
+// 📌 TESTCASE:
 console.log(lengthOfLongestSubstring("abcabcbb")) // 3
 console.log(lengthOfLongestSubstring("bbbbb")) // 1
 console.log(lengthOfLongestSubstring("pwwkew")) // 3
