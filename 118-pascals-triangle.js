@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// Given an integer numRows, return the first numRows of Pascal's triangle.
+//
+// ✅ SOLUTION:
 const generate = function(numRows) {
     let result = []
 
@@ -19,6 +23,6 @@ const generate = function(numRows) {
     return result
 };
 
-
+// 📌 TESTCASE:
 console.log(generate(5)) // [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
 console.log(generate(1)) // [[1]]
