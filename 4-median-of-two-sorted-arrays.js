@@ -26,8 +26,7 @@ const findMedianSortedArrays = function(nums1, nums2) {
         }
     }
 
-    let median = (sumLength) % 2 === 1 ? mergedArray[Math.floor(sumLength/2)] : (mergedArray[sumLength / 2] + mergedArray[sumLength / 2 - 1]) / 2;
-    return median;
+    return (sumLength) % 2 === 1 ? mergedArray[Math.floor(sumLength/2)] : (mergedArray[sumLength / 2] + mergedArray[sumLength / 2 - 1]) / 2;
 };
 
 console.log(findMedianSortedArrays([1,3], [2])) // 2
