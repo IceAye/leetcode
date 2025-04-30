@@ -1,3 +1,9 @@
+// ❓ DESCRIPTION:
+// Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
+// The overall run time complexity should be O(log (m+n)).
+//
+// ✅ SOLUTION:
+
 const findMedianSortedArrays = function(nums1, nums2) {
     let mergedArray = [];
     let left = 0;
@@ -29,6 +35,7 @@ const findMedianSortedArrays = function(nums1, nums2) {
     return (sumLength) % 2 === 1 ? mergedArray[Math.floor(sumLength/2)] : (mergedArray[sumLength / 2] + mergedArray[sumLength / 2 - 1]) / 2;
 };
 
+// 📌 TESTCASE:
 console.log(findMedianSortedArrays([1,3], [2])) // 2
 console.log(findMedianSortedArrays([1,2], [3,4])) // 2.5
 console.log(findMedianSortedArrays([1,1], [1,2])) // 1
