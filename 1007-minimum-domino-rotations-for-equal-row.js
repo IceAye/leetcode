@@ -1,3 +1,11 @@
+// ❓ DESCRIPTION:
+// In a row of dominoes, tops[i] and bottoms[i] represent the top and bottom halves of the ith domino. (A domino is a tile with two numbers from 1 to 6 - one on each half of the tile.)
+// We may rotate the ith domino, so that tops[i] and bottoms[i] swap values.
+// Return the minimum number of rotations so that all the values in tops are the same, or all the values in bottoms are the same.
+// If it cannot be done, return -1.
+// 📅 daily question 2025 May, 3
+//
+// ✅ SOLUTION:
 const minDominoRotations = function (tops, bottoms) {
     function check(target) {
         let topCount = 0;
@@ -23,6 +31,7 @@ const minDominoRotations = function (tops, bottoms) {
     return Math.min(result1, result2);
 };
 
+// 📌 TESTCASE:
 console.log(minDominoRotations([2,1,2,4,2,2], [5,2,6,2,3,2])) // 2
 console.log(minDominoRotations([5,2,6,2,3,2], [2,1,2,4,2,2])) // 2
 console.log(minDominoRotations([3,5,1,2,3], [3,6,3,3,4])) // -1
