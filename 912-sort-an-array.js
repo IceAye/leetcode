@@ -1,3 +1,8 @@
+// ❓ DESCRIPTION:
+// Given an array of integers nums, sort the array in ascending order and return it.
+// You must solve the problem without using any built-in functions in O(nlog(n)) time complexity and with the smallest space complexity possible.
+//
+// ✅ SOLUTION:
 const sortArray = function(nums) {
     if (nums.length <= 1) return nums;
 
@@ -39,5 +44,6 @@ const sortArray = function(nums) {
     return mergeSort(sortArray(left), sortArray(right));
 };
 
+// 📌 TESTCASE:
 console.log(sortArray([5,2,3,1])) // [1,2,3,5]
 console.log(sortArray([5,1,1,2,0,0])) // [0,0,1,1,2,5]
