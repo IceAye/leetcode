@@ -8,7 +8,7 @@
 //
 // Return s after removing the outermost parentheses of every primitive string in the primitive decomposition of s.
 //
-// ✅ SOLUTION (20.3% runtime, 96.31% memory):
+// ✅ SOLUTION 1 (20.3% runtime, 96.31% memory):
 const removeOuterParentheses = function (s) {
     const parentheses = {
         '(': 1,
@@ -25,6 +25,25 @@ const removeOuterParentheses = function (s) {
             if (count !== 0) {
                 result += char;
             }
+        }
+    }
+    return result;
+};
+
+// ✅ SOLUTION 1 (61.41% runtime, 92.79% memory):
+const removeOuterParentheses = function(s) {
+    let result = '';
+    let count = 0;
+
+    for (const char of s) {
+        if (char === '(') {
+            count++;
+        }
+        if (count > 1) {
+            result += char;
+        }
+        if (char === ')') {
+            count--;
         }
     }
     return result;
