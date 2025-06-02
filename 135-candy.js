@@ -8,7 +8,7 @@
 // Return the minimum number of candies you need to have to distribute the candies to the children.
 // 📅 (daily question 2025, June 2nd):
 //
-// ✅ SOLUTION:
+// ✅ SOLUTION (91.90% runtime, 60.04% memory):
 const candy = function(ratings) {
     const n = ratings.length;
     const candies = new Array(n).fill(1);
