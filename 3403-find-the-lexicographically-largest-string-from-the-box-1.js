@@ -13,18 +13,17 @@ const answerString = function(word, numFriends) {
     if (numFriends === 1) return word;
 
     const sortedWord = [...word].sort();
-    const mostWeightedChar = sortedWord.at(-1);
+    const mostWeightedChar = sortedWord[sortedWord.length - 1];
 
-    const max = [];
+    let max = '';
 
     for (let i = 0; i < word.length; i++) {
         if (word[i] === mostWeightedChar) {
             let string = word.slice(i, i + word.length - numFriends + 1);
-            max.push(string);
+            if (string > max) max = string;
         }
     }
-
-    return max.sort().at(-1);
+    return max;
 };
 
 // 📌 TESTCASE:
