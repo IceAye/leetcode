@@ -7,8 +7,9 @@
 // Bob can remap a digit to itself, in which case num does not change.
 // Bob can remap different digits for obtaining minimum and maximum values respectively.
 // The resulting number after remapping can contain leading zeroes.
+// 📅 (daily question 2025, June 14th):
 //
-// ✅ SOLUTION:
+// ✅ SOLUTION (100% runtime):
 const minMaxDifference = function (num) {
     let array = [...num.toString()];
     let indMax = array.findIndex((el) => el !== "9");
