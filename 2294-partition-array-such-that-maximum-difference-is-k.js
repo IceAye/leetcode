@@ -4,7 +4,7 @@
 // A subsequence is a sequence that can be derived from another sequence by deleting some or no elements without changing the order of the remaining elements.
 // (daily question 2025, June 19th):
 //
-// ✅ SOLUTION (48.00% runtime, 80.00% memory):
+// ✅ SOLUTION in JavaScript (48.00% runtime, 80.00% memory):
 const partitionArray = function (nums, k) {
     let count = 0;
     nums.sort((a, b) => a - b);
@@ -17,6 +17,22 @@ const partitionArray = function (nums, k) {
     }
     return count;
 };
+
+// ✅ SOLUTION in Python3
+class Solution:
+    def partitionArray(self, nums: List[int], k: int) -> int:
+        count = 0
+        nums.sort()
+        
+        i = 0
+        while i < len(nums):
+            j = i
+            while j < len(nums) and nums[j] - nums[i] <= k:
+                j += 1
+            count += 1
+            i = j
+            
+        return count
 
 // 📌 TESTCASE:
 console.log(partitionArray([3,6,1,2,5], 2)) // 2
