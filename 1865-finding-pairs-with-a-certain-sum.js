@@ -1,3 +1,16 @@
+// ❓ DESCRIPTION:
+// You are given two integer arrays nums1 and nums2. You are tasked to implement a data structure that supports queries of two types:
+//
+// Add a positive integer to an element of a given index in the array nums2.
+// Count the number of pairs (i, j) such that nums1[i] + nums2[j] equals a given value (0 <= i < nums1.length and 0 <= j < nums2.length).
+// Implement the FindSumPairs class:
+//
+// FindSumPairs(int[] nums1, int[] nums2) Initializes the FindSumPairs object with two integer arrays nums1 and nums2.
+// void add(int index, int val) Adds val to nums2[index], i.e., apply nums2[index] += val.
+// int count(int tot) Returns the number of pairs (i, j) such that nums1[i] + nums2[j] == tot.
+// 📅 (daily question 2025 July, 6th):
+
+// ✅ SOLUTION (84.21% runtime, 68.42% memory):
 /**
  * @param {number[]} nums1
  * @param {number[]} nums2
@@ -38,11 +51,10 @@ FindSumPairs.prototype.count = function(tot) {
         const target = tot - num;
         result += this.freq.get(target) || 0;
     }
-
     return result;
 };
 
-
+// 📌 TESTCASE:
 let obj = new FindSumPairs([1, 1, 2, 2, 2, 3], [1, 4, 5, 2, 5, 4])
 console.log(obj.count(7)) // 8
 console.log(obj.add(3, 2))  // nums2 = [1,4,5,4,5,4]
