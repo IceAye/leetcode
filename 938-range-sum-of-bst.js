@@ -1,7 +1,7 @@
 // ❓ DESCRIPTION:
 // Given the root node of a binary search tree and two integers low and high, return the sum of values of all nodes with a value in the inclusive range [low, high].
 
-// ✅ SOLUTION (91.74% runtime, 85.49% memory):
+// ✅ SOLUTION 1 (91.74% runtime, 85.49% memory):
 
 function TreeNode(val, left, right) {
     this.val = val === undefined ? 0 : val;
@@ -36,6 +36,21 @@ let rangeSumBST = function (root, low, high) {
 
     checkAndAddValue(root);
     return result;
+};
+
+// ✅ SOLUTION 2 (91.74% runtime, 63.84% memory):
+let rangeSumBST = function (root, low, high) {
+
+    if (!root) return 0;
+
+    if (root.val < low) {
+        return rangeSumBST(root.right, low, high);
+    }
+
+    if (root.val > high) {
+        return rangeSumBST(root.left, low, high);
+    }
+    return root.val + rangeSumBST(root.left, low, high) + rangeSumBST(root.right, low, high);
 };
 
 // 📌 TESTCASE:
