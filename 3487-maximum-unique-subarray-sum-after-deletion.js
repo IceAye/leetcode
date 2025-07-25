@@ -22,6 +22,17 @@ const maxSum = function(nums) {
     return sum;
 };
 
+// SOLUTION 2 (100% runtime, 18% memory):
+const maxSum = function(nums) {
+    const maxNumber = Math.max(...nums);
+
+    if (maxNumber <= 0) return maxNumber;
+
+    let unique = new Set(nums);
+
+    return [...unique].reduce((acc, curr) => acc + (curr > 0 ? curr : 0), 0);
+};
+
 console.log(maxSum([1,2,3,4,5])) // 15
 console.log(maxSum([1,1,0,1,1])) // 1
 console.log(maxSum([1,2,-1,-2,1,0,-1])) // 3
