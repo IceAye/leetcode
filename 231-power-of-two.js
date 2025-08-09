@@ -1,6 +1,7 @@
 // ❓ DESCRIPTION:
 // Given an integer n, return true if it is a power of two. Otherwise, return false.
 // An integer n is a power of two, if there exists an integer x such that n == 2x.
+// (daily question 2025 August, 9th)
 
 // ✅ SOLUTION 1:
 /**
@@ -15,6 +16,11 @@ const isPowerOfTwo = function(n) {
         i++;
     }
     return false;
+};
+
+// ✅ SOLUTION 2:
+const isPowerOfTwo = function(n) {
+    return n > 0 && n.toString(2).match(/1/g).length === 1;
 };
 
 // 📌 TESTCASE:
