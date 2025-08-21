@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.
+
+// ✅ SOLUTION:
 function ListNode(val, next) {
     this.val = val === undefined ? 0 : val;
     this.next = next === undefined ? null : next;
@@ -23,6 +27,7 @@ const deleteDuplicates = function (head) {
     return head;
 };
 
+// 📌 TESTCASE:
 console.log(
     deleteDuplicates(new ListNode(1, new ListNode(1, new ListNode(2)))),
 );
