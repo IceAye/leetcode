@@ -1,4 +1,7 @@
+// ❓ DESCRIPTION:
+// Given the root of a binary tree, return the inorder traversal of its nodes' values.
 
+// ✅ SOLUTION (100% runtime):
 function TreeNode(val, left, right) {
     this.val = (val===undefined ? 0 : val)
     this.left = (left===undefined ? null : left)
@@ -23,5 +26,6 @@ const inorderTraversal = function (root) {
     return output;
 };
 
+// 📌 TESTCASE:
 console.log(inorderTraversal(new TreeNode(1, null, new TreeNode(2, new TreeNode(3)))));
 console.log(inorderTraversal(new TreeNode(1, new TreeNode(2, new TreeNode(4, null, null), new TreeNode(5, new TreeNode(6), new TreeNode(7))), new TreeNode(3, null, new TreeNode(8, new TreeNode(9), null)))))
