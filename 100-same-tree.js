@@ -1,4 +1,8 @@
+// ❓ DESCRIPTION:
+// Given the roots of two binary trees p and q, write a function to check if they are the same or not.
+// Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
 
+// ✅ SOLUTION (100% runtime):
 // Definition for a binary tree node.
 function TreeNode(val, left, right) {
     this.val = (val===undefined ? 0 : val)
@@ -33,4 +37,5 @@ const isSameTree = function(p, q) {
     return true;
 };
 
+// 📌 TESTCASE:
 console.log(isSameTree(new TreeNode(1, new TreeNode(2), new TreeNode(3)), new TreeNode(1, new TreeNode(2), new TreeNode(3))))
