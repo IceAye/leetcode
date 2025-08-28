@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
+
+// ✅ OLUTION:
 // Definition for a binary tree node.
 function TreeNode(val, left, right) {
     this.val = val === undefined ? 0 : val;
@@ -21,6 +25,7 @@ const isSymmetric = function (root) {
     return check(root.left, root.right);
 };
 
+// 📌 TESTCASE:
 console.log(
     isSymmetric(
         new TreeNode(
@@ -29,4 +34,4 @@ console.log(
             new TreeNode(2, new TreeNode(4), new TreeNode(3)),
         ),
     ),
-);
+); // true
