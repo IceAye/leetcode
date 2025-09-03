@@ -1,4 +1,7 @@
+// ❓ DESCRIPTION:
+// Given an integer array nums where the elements are sorted in ascending order, convert it to a height-balanced binary search tree.
 
+// ✅ SOLUTION (42.80% runtime, 84.05% memory):
 // Definition for a binary tree node.
 
 function TreeNode(val, left, right) {
@@ -12,8 +15,6 @@ function TreeNode(val, left, right) {
  * @return {TreeNode}
  */
 const sortedArrayToBST = function(nums) {
-    let node = new TreeNode();
-
     const buildNode = (left, right) => {
         if (left > right) {
             return null;
@@ -30,4 +31,5 @@ const sortedArrayToBST = function(nums) {
     return buildNode(0, nums.length - 1);
 };
 
+// 📌 TESTCASE:
 console.log(sortedArrayToBST([-10,-3,0,5,9])) // [0,-3,9,-10,null,5]
