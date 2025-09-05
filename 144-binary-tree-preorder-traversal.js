@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// Given the root of a binary tree, return the preorder traversal of its nodes' values.
+
+// ✅ SOLUTION (100% runtime):
 // Definition for a binary tree node.
 function TreeNode(val, left, right) {
     this.val = val === undefined ? 0 : val;
@@ -25,6 +29,7 @@ const preorderTraversal = function (root) {
     return preordedTree;
 };
 
+// 📌 TESTCASE:
 console.log(
     preorderTraversal(
         new TreeNode(
