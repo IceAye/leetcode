@@ -1,3 +1,7 @@
+// ❓ DESCRIPTION:
+// Given a binary tree, determine if it is height-balanced.
+
+// ✅ SOLUTION (89.34% runtime,  99.25% memory):
 // Definition for a binary tree node.
 function TreeNode(val, left, right) {
     this.val = val === undefined ? 0 : val;
@@ -26,6 +30,7 @@ const isBalanced = function (root) {
     return dfsPost(root) !== false;
 };
 
+// 📌 TESTCASE:
 console.log(
     isBalanced(
         new TreeNode(
