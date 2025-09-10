@@ -1,3 +1,8 @@
+// ❓ DESCRIPTION:
+// Given a binary tree, find its minimum depth.
+// The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
+// Note: A leaf is a node with no children.
+
 // Definition for a binary tree node.
 function TreeNode(val , left , right) {
     this.val = val === undefined ? 0 : val;
@@ -9,6 +14,9 @@ function TreeNode(val , left , right) {
  * @param {TreeNode} root
  * @return {number}
  */
+
+// ✅ SOLUTION 1 (92.50% runtime, 99.76% memory):
+
 const minDepth = function (root) {
     if (!root) return 0;
     let depth = 1;
@@ -31,6 +39,7 @@ const minDepth = function (root) {
     }
 };
 
+// ✅ SOLUTION 2:
 const minDepth = function (root) {
     if (root == null) return 0;
     if (root.left == null && root.right == null)
@@ -42,6 +51,7 @@ const minDepth = function (root) {
     return Math.min(minDepth(root.left) , minDepth(root.right)) + 1;
 };
 
+// 📌 TESTCASE:
 console.log(minDepth([]));
 console.log(
     minDepth(
