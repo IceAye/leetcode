@@ -1,3 +1,11 @@
+// ❓ DESCRIPTION:
+// Given a string s, return the longest palindromic substring in s.
+
+// ❗ CONSTRAINTS:
+// 1 <= s.length <= 1000
+// s consist of only digits and English letters.
+
+// ✅ SOLUTION (63.30% runtime, 44.08% memory):
 /**
  * @param {string} s
  * @return {string}
@@ -24,6 +32,7 @@ const longestPalindrome = function(s) {
     return result
 };
 
+// 📌 TESTCASE:
 console.log(longestPalindrome("babad")) // bab
 console.log(longestPalindrome("cbbd")) // bb
 console.log(longestPalindrome("a")) // bb
