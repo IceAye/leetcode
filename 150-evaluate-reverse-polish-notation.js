@@ -13,7 +13,7 @@
 // 1 <= tokens.length <= 10^4
 // tokens[i] is either an operator: "+", "-", "*", or "/", or an integer in the range [-200, 200].
 
-// ✅ SOLUTION (50.60% runtime, 48.24% memory):
+// ✅ SOLUTION (100% runtime, 78.87% memory):
 /**
  * @param {string[]} tokens
  * @return {number}
@@ -24,7 +24,7 @@ const evalRPN = function (tokens) {
 
     for (let i = 0; i < tokens.length; i++) {
         const char = tokens[i];
-        if (/\d/.test(char)) {
+        if (!isNaN(char)) {
             stack.push(+char);
         } else {
             const second = stack.pop();
