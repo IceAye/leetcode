@@ -1,3 +1,11 @@
+// ❓ DESCRIPTION:
+// Given a string containing just the characters '(' and ')', return the length of the longest valid (well-formed) parentheses substring.
+
+// ❗ CONSTRAINTS:
+// 0 <= s.length <= 3 * 10^4
+// s[i] is '(', or ')'.
+
+// ✅ SOLUTION (60.35% runtime, 43.95% memory):
 /**
  * @param {string} s
  * @return {number}
@@ -22,6 +30,7 @@ const longestValidParentheses = function (s) {
     return result;
 };
 
+// 📌 TESTCASE:
 console.log(longestValidParentheses("(()")) // 2
 console.log(longestValidParentheses(")()())")) // 4
 console.log(longestValidParentheses("")) // 0
