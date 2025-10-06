@@ -1,3 +1,11 @@
+// ❓ DESCRIPTION:
+// Given two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.
+
+// ❗ CONSTRAINTS:
+// 1 <= s.length, p.length <= 3 * 10^4
+// s and p consist of lowercase English letters.
+
+// ✅ SOLUTION (69.05% runtime, 13.95% memory):
 /**
  * @param {string} s
  * @param {string} p
@@ -32,5 +40,6 @@ const findAnagrams = function(s, p) {
     return result;
 };
 
+// 📌 TESTCASE:
 console.log(findAnagrams("cbaebabacd", "abc")) // [0,6]
 console.log(findAnagrams("abab", "ab")) // [0,1,2]
