@@ -1,3 +1,12 @@
+// ❓ DESCRIPTION:
+// Given an array of integers nums and an integer limit, return the size of the longest non-empty subarray such that the absolute difference between any two elements of this subarray is less than or equal to limit.
+
+// ❗ CONSTRAINTS:
+// 1 <= nums.length <= 10^5
+// 1 <= nums[i] <= 10^9
+// 0 <= limit <= 10^9
+
+// ✅ SOLUTION:
 /**
  * @param {number[]} nums
  * @param {number} limit
@@ -34,5 +43,6 @@ const longestSubarray = function(nums, limit) {
     return result;
 };
 
+// TESTCASE:
 console.log(longestSubarray([10,1,2,4,7,2],  5)) // 4
 console.log(longestSubarray([4,2,2,2,4,4,2,2],  0)) // 3
